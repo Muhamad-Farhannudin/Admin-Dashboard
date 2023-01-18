@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Admin-Dashboard/static/css/main.19718250.css",
-    "main.js": "/Admin-Dashboard/static/js/main.874b748d.js",
-    "static/media/image-1.png": "/Admin-Dashboard/static/media/image-1.70b9d979d055bc422a5d.png",
-    "static/media/bg-image-1.png": "/Admin-Dashboard/static/media/bg-image-1.713bba2f981d058b886a.png",
-    "static/media/sertifikat.png": "/Admin-Dashboard/static/media/sertifikat.f81e2ced776d20158562.png",
-    "static/media/Vectors.png": "/Admin-Dashboard/static/media/Vectors.d7520bebb0289611de07.png",
-    "index.html": "/Admin-Dashboard/index.html",
-    "main.19718250.css.map": "/Admin-Dashboard/static/css/main.19718250.css.map",
-    "main.874b748d.js.map": "/Admin-Dashboard/static/js/main.874b748d.js.map"
+    "main.css": "/static/css/main.19718250.css",
+    "main.js": "/static/js/main.90379fdc.js",
+    "static/media/image-1.png": "/static/media/image-1.70b9d979d055bc422a5d.png",
+    "static/media/bg-image-1.png": "/static/media/bg-image-1.713bba2f981d058b886a.png",
+    "static/media/sertifikat.png": "/static/media/sertifikat.f81e2ced776d20158562.png",
+    "static/media/Vectors.png": "/static/media/Vectors.d7520bebb0289611de07.png",
+    "index.html": "/index.html",
+    "main.19718250.css.map": "/static/css/main.19718250.css.map",
+    "main.90379fdc.js.map": "/static/js/main.90379fdc.js.map"
   },
   "entrypoints": [
     "static/css/main.19718250.css",
-    "static/js/main.874b748d.js"
+    "static/js/main.90379fdc.js"
   ]
 }
