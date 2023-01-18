@@ -1,6 +1,4 @@
-import Navbar from './components/Navbar'
 import Home from './Pages/Home'
-// import Home2 from './Pages/Home2'
 import { Route, Routes } from 'react-router-dom';
 import Login from './Pages/Login';
 import Daftar from './Pages/Daftar';
