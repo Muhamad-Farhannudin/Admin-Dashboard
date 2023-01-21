@@ -14,6 +14,8 @@ module.exports = {
       },
       fontFamily: {
         'LexendDeca' : ['Lexend Deca'],
+        'Muli' : ['muli'],
+        'Mulish' : ['Mulish'],
       },
       boxShadow: {
         '3xl' : '0px 4px 4px rgba(0, 0, 0, 0.3)',

@@ -16,9 +16,11 @@ export default function Login() {
             <h3 className='absolute right-0 text-green font-medium text-sm leading-[17px] cursor-pointer'>Forgot Password ?</h3>
           </div>
           <div className='relative'>
+            <Link to='/judulSeminar'>
             <button className='shadow-3xl w-full h-11 rounded-[10px] text-white mt-6 bg-green text-base leading-5 font-normal'>Login</button>
+            </Link>
             <Link to='/'>
-              <button className='w-[40px] h-[40px] bg-green mt-20 absolute rounded-2xl right-0 text-3xl content-center text-center'>
+              <button className='w-[40px] h-[40px] bg-green mt-20 absolute rounded-xl right-0 text-3xl content-center text-center'>
               <div className='pl-1'><MdOutlineArrowBack /></div>
               </button>
             </Link>

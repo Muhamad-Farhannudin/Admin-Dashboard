@@ -1,9 +1,8 @@
-import React, { useState} from 'react'
+import React, { useState, useCallback} from 'react'
 import Image from '../assets/images/image-1.png'
 import Sertifikat from '../assets/images/sertifikat.png'
 import BgImage from '../assets/images/bg-image-1.png'
 import { MdArrowBackIos } from "react-icons/md";
-import ImageData from './ImageData';
 import { useRef } from 'react';
 // import Pagination from './Pagination';
 import '../index.css'
@@ -20,29 +19,29 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 export default function Main() {
-  const swiperRef = useRef();
   
   const [show, setShow] = useState(false);
 
-  const [current, setCurrent] = useState(0);
-  const length = Sertifikat.length;
+  const sliderRef = useRef(null);
 
-    function next() {
-        setCurrent( current === length - 1 ? 0 : current + 1 );
-    }
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
 
-    function prev() {
-        setCurrent( current === 0 ? length - 1 : current - 1 );
-    }
-  
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
+
 
   return (
     
     <>
       <div  className="flex w-[1440px] mx-auto scrollbar-hide">
-      <img className='w-[1400px] absolute translate-y-12 right-0 -z-20' src={BgImage} alt="bg-image" />
+      <img className='w-[1400px] absolute translate-y-12 right-0 -z-20' src={BgImage} alt="bg-1" />
         <div className='w-1/2 pt-[77px] px-5 relative'>
-            <img className='w-[477px] h-[586px] absolute top-0 right-0 mt-[77px]' src={Image} alt="image-1" />
+            <img className='w-[477px] h-[586px] absolute top-0 right-0 mt-[77px]' src={Image} alt="bg-2" />
         </div>
         <div className='px-10 w-2/3 relative'>
           <div className='mt-[174px]'>
@@ -54,6 +53,7 @@ export default function Main() {
             <div className='w-[328px] h-[399px] mb-4 bg-white absolute -translate-x-40 translate-y-14 rounded-2xl top-0 right-0'>
               <div className='w-full h-[163px] mx-auto mt-4'>
                 <Swiper
+                  ref={sliderRef}
                   spaceBetween={30}
                   navigation={{
                     nextEl: '.review-swiper-button-next',
@@ -82,9 +82,9 @@ export default function Main() {
                 </div>
               </div>
               <div className='flex justify-between px-4 pt-8'>
-                <button className='.review-swiper-button-prev text-151920/50 px-8 rounded-lg py-3 border-[#151920]/50 border-2 bg-white flex items-center justify-center'>
+                <button onClick={handlePrev} className='.review-swiper-button-prev text-151920/50 px-8 rounded-lg py-3 border-[#151920]/50 border-2 bg-white flex items-center justify-center'>
                   <MdArrowBackIos />Previous</button>
-                <button className='.review-swiper-button-next text-white px-12 rounded-lg py-3 bg-[#2B4BF2]'>Next</button>
+                <button onClick={handleNext} className='.review-swiper-button-next text-white px-12 rounded-lg py-3 bg-[#2B4BF2]'>Next</button>
               </div>
             </div>
             
